@@ -12,8 +12,7 @@ on:
     # cronograma de execução
     # 1 - minuto, 2 - hora, 3 - dia do mês, 4 - mês, 5 - dia da semana
     # * -> passamos quando queremos ignorar
-    - cron: '07 21 * * *'
-      timezone: 'America/Sao_Paulo'
+    - cron: '12 0 * * *'
 
 #tarefas dentro da pipeline = jobs
 

@@ -84,6 +84,24 @@ jobs:
       - name: Executando testes e2e
         run: yarn run e2e
 
+  mutation-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: latest
+
+      - name: Instalando yarn
+        run: npm install -g yarn
+
+      - name: Instalando dependências
+        run: yarn
+
+      - name: Executando os testes de mutação
+        run: yarn run test:mutation
+
   deploy:
     runs-on: ubuntu-latest
     needs: [unidade, e2e-tests]

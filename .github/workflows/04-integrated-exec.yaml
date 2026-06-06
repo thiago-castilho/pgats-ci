@@ -89,7 +89,7 @@ jobs:
 
       - name: Salvando relatórios de testes
         uses: actions/upload-artifact@v6
-        if: ${{ aways() }}
+        if: ${{ always() }}
         with:
           path: ./playwright-report
           name: Relatório de Testes E2E
